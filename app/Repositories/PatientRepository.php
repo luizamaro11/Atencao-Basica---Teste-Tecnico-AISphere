@@ -6,11 +6,6 @@ use App\Interfaces\PatientRepositoryInterface;
 use App\Models\Patient;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
-/**
- * Implementação concreta do repositório de Pacientes.
- * Responsável exclusivamente pela comunicação com o banco de dados via Eloquent.
- * Segue o Princípio da Responsabilidade Única (SOLID - letra S).
- */
 class PatientRepository implements PatientRepositoryInterface
 {
     /**
@@ -23,7 +18,7 @@ class PatientRepository implements PatientRepositoryInterface
 
         if ($search) {
             $query->where('name', 'like', "%{$search}%")
-                  ->orWhere('email', 'like', "%{$search}%");
+                ->orWhere('email', 'like', "%{$search}%");
         }
 
         return $query->paginate($perPage);

@@ -4,10 +4,6 @@ namespace App\Interfaces;
 
 use App\Models\User;
 
-/**
- * Contrato que define as operações de acesso ao banco de dados para Usuários.
- * Garante a Inversão de Dependência (SOLID - letra D).
- */
 interface UserRepositoryInterface
 {
     /** Cria e persiste um novo usuário no banco de dados. */

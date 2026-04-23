@@ -6,11 +6,6 @@ use App\Interfaces\UserRepositoryInterface;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-/**
- * Camada de serviço responsável pelas regras de negócio relacionadas a Usuários.
- * Centraliza operações como registro, atualização de perfil e exclusão de conta.
- * Segue o Princípio da Responsabilidade Única (SOLID - letra S).
- */
 class UserService
 {
     protected $userRepository;
@@ -27,7 +22,7 @@ class UserService
     public function registerUser(array $data): User
     {
         $data['password'] = Hash::make($data['password']);
-        
+
         return $this->userRepository->create($data);
     }
 

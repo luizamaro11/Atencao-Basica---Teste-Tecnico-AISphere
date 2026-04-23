@@ -5,10 +5,6 @@ namespace App\Interfaces;
 use App\Models\Patient;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
-/**
- * Contrato que define as operações de acesso ao banco de dados para Pacientes.
- * Garante a Inversão de Dependência (SOLID - letra D).
- */
 interface PatientRepositoryInterface
 {
     /** Retorna a listagem paginada de pacientes, com suporte a busca textual. */

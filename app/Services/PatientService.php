@@ -5,12 +5,6 @@ namespace App\Services;
 use App\Interfaces\PatientRepositoryInterface;
 use App\Models\Patient;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
-
-/**
- * Camada de serviço responsável pelas regras de negócio relacionadas a Pacientes.
- * Orquestra as operações entre o Controller e o Repositório.
- * Segue o Princípio da Responsabilidade Única (SOLID - letra S).
- */
 class PatientService
 {
     protected $patientRepository;

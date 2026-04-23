@@ -5,11 +5,6 @@ namespace App\Repositories;
 use App\Interfaces\UserRepositoryInterface;
 use App\Models\User;
 
-/**
- * Implementação concreta do repositório de Usuários.
- * Responsável exclusivamente pela comunicação com o banco de dados via Eloquent.
- * Segue o Princípio da Responsabilidade Única (SOLID - letra S).
- */
 class UserRepository implements UserRepositoryInterface
 {
     /** Persiste um novo usuário no banco de dados. */
