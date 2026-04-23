@@ -28,7 +28,7 @@ Siga os passos abaixo para testar a aplicação em seu ambiente local (assumindo
 
 1. **Clone o repositório e acesse a pasta:**
    ```bash
-   git clone git@github.com:luizamaro11/Aten-o-B-sica---Teste-T-cnico-AISphere.git
+   git clone git@github.com:luizamaro11/Atencao-Basica---Teste-Tecnico-AISphere.git
    ```
 
 2. **Instale as dependências do Backend:**
