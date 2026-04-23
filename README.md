@@ -86,8 +86,8 @@ Se você executou o `php artisan migrate:fresh --seed`, um administrador e 5 pac
 
 ## 🧪 Suíte de Testes (TDD/Feature)
 
-O projeto possui rigorosa cobertura de código nas funcionalidades críticas e autenticação.
-A ferramenta utilizada é o **Pest**. Para rodar as asserções de qualidade, basta digitar o seguinte comando:
+O sistema possui alguns testes implementados para funcionalidades criticas do sistema. 
+A ferramenta utilizada é o **Pest**. Para rodar as asserções de qualidade, basta digitar o comando:
 
 ```bash
 php artisan test

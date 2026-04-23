@@ -10,7 +10,7 @@ use Illuminate\Validation\Rule;
 class ProfileUpdateRequest extends FormRequest
 {
     /**
-     * Get the validation rules that apply to the request.
+     * Define as regras de validação para atualização do perfil.
      *
      * @return array<string, ValidationRule|array<mixed>|string>
      */

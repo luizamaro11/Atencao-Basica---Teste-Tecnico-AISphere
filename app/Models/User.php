@@ -14,7 +14,7 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * Campos que podem ser preenchidos via mass assignment.
      *
      * @var list<string>
      */
@@ -26,13 +26,14 @@ class User extends Authenticatable
         'role',
     ];
 
+    /** Relacionamento: o usuário pode ter cadastrado vários pacientes no sistema. */
     public function patientsCreated()
     {
         return $this->hasMany(Patient::class, 'created_by_id');
     }
 
     /**
-     * The attributes that should be hidden for serialization.
+     * Campos ocultados na serialização do modelo (ex: respostas JSON).
      *
      * @var list<string>
      */
@@ -42,7 +43,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * Define os casts automáticos de tipos para os atributos do modelo.
      *
      * @return array<string, string>
      */

@@ -41,5 +41,6 @@
                 &copy; {{ date('Y') }} PrimaryCare. Todos os direitos reservados.
             </div>
         </div>
+        @stack('scripts')
     </body>
 </html>

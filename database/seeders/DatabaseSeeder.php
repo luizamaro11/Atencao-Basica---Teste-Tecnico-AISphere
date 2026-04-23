@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Hash;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Popula o banco de dados com dados iniciais para testes e demonstração.
      */
     public function run(): void
     {

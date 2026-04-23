@@ -7,11 +7,12 @@ test('registration screen can be rendered', function () {
 });
 
 test('new users can register', function () {
+    // 'Senha@123' satisfaz todas as regras: 8+ chars, maiúscula, minúscula, número, símbolo
     $response = $this->post('/register', [
-        'name' => 'Test User',
-        'email' => 'test@example.com',
-        'password' => 'password',
-        'password_confirmation' => 'password',
+        'name'                  => 'Test User',
+        'email'                 => 'test@example.com',
+        'password'              => 'Senha@123',
+        'password_confirmation' => 'Senha@123',
     ]);
 
     $this->assertAuthenticated();

@@ -6,8 +6,17 @@ use App\Interfaces\PatientRepositoryInterface;
 use App\Models\Patient;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
+/**
+ * Implementação concreta do repositório de Pacientes.
+ * Responsável exclusivamente pela comunicação com o banco de dados via Eloquent.
+ * Segue o Princípio da Responsabilidade Única (SOLID - letra S).
+ */
 class PatientRepository implements PatientRepositoryInterface
 {
+    /**
+     * Retorna a listagem paginada de pacientes.
+     * Aplica filtro de busca por nome ou e-mail, se informado.
+     */
     public function getAllPaginated(string $search = null, int $perPage = 10): LengthAwarePaginator
     {
         $query = Patient::with('createdBy')->latest();
@@ -20,21 +29,25 @@ class PatientRepository implements PatientRepositoryInterface
         return $query->paginate($perPage);
     }
 
+    /** Busca um paciente específico pelo ID. */
     public function findById(int $id): ?Patient
     {
         return Patient::find($id);
     }
 
+    /** Persiste um novo paciente no banco de dados. */
     public function create(array $data): Patient
     {
         return Patient::create($data);
     }
 
+    /** Atualiza os campos de um paciente existente. */
     public function update(Patient $patient, array $data): bool
     {
         return $patient->update($data);
     }
 
+    /** Executa o soft delete do paciente (mantém o registro no banco). */
     public function delete(Patient $patient): bool
     {
         return $patient->delete();

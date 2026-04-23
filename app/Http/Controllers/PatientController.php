@@ -18,7 +18,7 @@ class PatientController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Exibe a listagem de pacientes, com suporte a busca por termo.
      */
     public function index(Request $request)
     {
@@ -29,7 +29,7 @@ class PatientController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Exibe o formulário de cadastro de um novo paciente.
      */
     public function create()
     {
@@ -37,7 +37,7 @@ class PatientController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Armazena um novo paciente no banco de dados.
      */
     public function store(StorePatientRequest $request)
     {
@@ -51,7 +51,7 @@ class PatientController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Exibe os detalhes de um paciente específico.
      */
     public function show(Patient $patient)
     {
@@ -59,7 +59,7 @@ class PatientController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Exibe o formulário de edição de um paciente.
      */
     public function edit(Patient $patient)
     {
@@ -67,7 +67,7 @@ class PatientController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Atualiza os dados de um paciente no banco de dados.
      */
     public function update(UpdatePatientRequest $request, Patient $patient)
     {
@@ -82,7 +82,7 @@ class PatientController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove o paciente do sistema (soft delete).
      */
     public function destroy(Patient $patient)
     {
