@@ -7,7 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 class StorePatientRequest extends FormRequest
 {
     /**
-     * Determine if the user is authorized to make this request.
+     * Verifica se o usuário está autorizado a realizar esta requisição.
      */
     public function authorize(): bool
     {
@@ -15,7 +15,7 @@ class StorePatientRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
+     * Define as regras de validação para o cadastro de paciente.
      *
      * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
      */

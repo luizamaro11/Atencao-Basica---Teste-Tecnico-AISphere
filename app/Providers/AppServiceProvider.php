@@ -7,7 +7,8 @@ use Illuminate\Support\ServiceProvider;
 class AppServiceProvider extends ServiceProvider
 {
     /**
-     * Register any application services.
+     * Registra os bindings do contêiner de dependências (IoC).
+     * Mapeia as interfaces para suas implementações concretas (Inversão de Dependência - SOLID).
      */
     public function register(): void
     {
@@ -22,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap any application services.
+     * Executado após o registro de todos os serviços. Ponto de inicialização da aplicação.
      */
     public function boot(): void
     {

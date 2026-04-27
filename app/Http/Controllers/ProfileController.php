@@ -19,7 +19,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Display the user's profile form.
+     * Exibe o formulário de edição do perfil do usuário.
      */
     public function edit(Request $request): View
     {
@@ -29,7 +29,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Update the user's profile information.
+     * Atualiza as informações do perfil do usuário autenticado.
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
@@ -39,7 +39,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * Delete the user's account.
+     * Exclui permanentemente a conta do usuário autenticado.
      */
     public function destroy(Request $request): RedirectResponse
     {
